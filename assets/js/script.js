@@ -15,7 +15,10 @@ let getPhotos = function(search) {
         if (response.ok) {
             response.json().then(function (data) {
             console.log(data);
-
+            
+            const elements = document.getElementsByClassName("image-id");
+            while (elements.length > 0) elements[0].remove();
+           
             if (!data["photos"]["photo"]) {
                 errorSearchEl.textContent = "** Sorry no photosfound, try again **";
             } else {
@@ -27,9 +30,10 @@ let getPhotos = function(search) {
                     console.log("Fetch ", farmId, serverId, id, secretId); 
                     //Display photo - https://farm66.staticflickr.com/65535/50862216527_e08bc3716f.jpg         
                     let getImage = "https://farm" + farmId + ".staticflickr.com/" + serverId + "/" + id + "_" + secretId + ".jpg";
-                    let imageEl = document.querySelector('.show-photos')
+                    let imageEl = document.querySelector('#show-photos')
                     let imageTag = document.createElement('img');
                     imageTag.setAttribute('src', getImage);
+                    imageTag.classList.add('image-id');
                     imageEl.appendChild(imageTag);
                 }
             };
