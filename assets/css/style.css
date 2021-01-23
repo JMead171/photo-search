@@ -8,6 +8,8 @@
     --primary: lightblue;
     --secondary: darkgrey;
     --tertiary: yellow;
+    --quaternary: yellowgreen;
+    --quinary:  pink;
     --error: rgb(141, 10, 10);
 }
 
@@ -31,7 +33,7 @@ header {
   
   @keyframes blink {
     0% {
-        background-color: greenyellow;  
+        background-color: var(--quaternary);  
         font-size: 5px;
     }
     25% {
@@ -39,7 +41,7 @@ header {
         font-size: 20px;
     }
     50% {
-        background-color: greenyellow;  
+        background-color: var(--quaternary);  
         font-size: 35px;
     }
     75% {
@@ -80,9 +82,13 @@ section h2 {
 
 .click-me {
     width: 150px;
-    background-color: pink;
+    background-color: var(--quinary);
     font-weight: bold;
     border-radius: 12px;   
+}
+
+.click-me:hover {
+    background-color: var(--tertiary);
 }
 
 #span-search {

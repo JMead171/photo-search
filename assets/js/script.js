@@ -18,7 +18,7 @@ let getPhotos = function(search) {
             const elements = document.getElementsByClassName("image-id");
             while (elements.length > 0) elements[0].remove();
             let searchName = document.getElementById('span-search');
-            searchName.textContent = " " + search;
+            searchName.textContent = " " + search + " ";
            
             if (!data["photos"]["photo"] || data["photos"]["photo"].length < 1) {
                 errorSearchEl.textContent = "** Sorry no photos found, try again **";
@@ -28,7 +28,6 @@ let getPhotos = function(search) {
                     let serverId = data["photos"]["photo"][i]["server"];
                     let id = data["photos"]["photo"][i]["id"];
                     let secretId = data["photos"]["photo"][i]["secret"];
-                    //Display photo - https://farm66.staticflickr.com/65535/50862216527_e08bc3716f.jpg         
                     let getImage = "https://farm" + farmId + ".staticflickr.com/" + serverId + "/" + id + "_" + secretId + ".jpg";
                     let imageEl = document.querySelector('#show-photos')
                     let imageTag = document.createElement('img');
