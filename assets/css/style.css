@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: lightblue;
+    --secondary: darkgrey;
+    --tertiary: yellow;
+    --error: rgb(141, 10, 10);
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--secondary);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    height: 75px;
+    background-color: var(--primary);
+    text-align: center;
+}
+
+.blink {
+    animation: blink 1s steps(1, end) 3;
+  }
+  
+  @keyframes blink {
+    0% {
+        background-color: greenyellow;  
+        font-size: 5px;
+    }
+    25% {
+        background-color: var(--tertiary);  
+        font-size: 20px;
+    }
+    50% {
+        background-color: greenyellow;  
+        font-size: 35px;
+    }
+    75% {
+        background-color: var(--tertiary);  
+        font-size: 60px;
+    }
+    100% { 
+        background-color: var(--primary);
+    }
+  }
+
+section h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.photo-search {
+    text-align: center;
+}
+
+.photo-search input {
+    width: 200px;
+    border-radius: 10px;
+    padding: 2px 0;
+}
+
+.search-btn {
+    width: 150px;
+    background-color: var(--primary);
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 2px 0;
+}
+
+.search-btn:hover {
+    background-color: var(--tertiary);
+}
+
+.click-me {
+    width: 150px;
+    background-color: pink;
+    font-weight: bold;
+    border-radius: 12px;   
+}
+
+#span-search {
+    color: var(--tertiary);
+}
+
+.error-msg {
+    padding: 5px 0;
+    color: var(--error);
+}
+
+#show-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.image-id {
+    margin: 5px;
+}
+
+footer  {
+    position: fixed;
+    bottom: 0pt;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary);
+}
