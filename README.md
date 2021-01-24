@@ -2,7 +2,7 @@
 Photo Search App
 
 ## Description
-This project is allows a user to search for photos from Flickr.
+This project allows a user to search for photos from Flickr.
 
 
   
@@ -19,7 +19,7 @@ Clone GitHub.
   
   
 ## Usage 
-This project allows users to users to search for photos.
+This project allows users to search for photos on the internet.
 
 
 ## License
@@ -39,4 +39,4 @@ JavaScript, HTML5, CSS and API.
   
   
 ## Questions
-Please send questions to jeffdmead171@gmail.com, more information can be found at https://github.com/JMead171/screening-project
+Please send questions to jeffdmead171@gmail.com, more information can be found at https://github.com/JMead171/photo-search

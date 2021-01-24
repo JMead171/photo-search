@@ -20,11 +20,17 @@ body {
 
 header {
     position: sticky;
-    top: 0;
+    top: 0; 
     padding: 10px 0;
     height: 75px;
     background-color: var(--primary);
     text-align: center;
+}
+
+section {
+    position: sticky;
+    top: 75px;
+    background-color: var(--secondary);
 }
 
 .blink {
@@ -55,7 +61,7 @@ header {
 
 section h2 {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .photo-search {
@@ -117,4 +123,124 @@ footer  {
     width: 100%;
     text-align: center;
     background-color: var(--primary);
+}
+
+@media screen and (max-width: 540px) {
+    .blink {
+        animation: blink 1s steps(1, end) 3;
+      }
+      
+      @keyframes blink {
+        0% {
+            background-color: var(--quaternary);  
+            font-size: 5px;
+        }
+        25% {
+            background-color: var(--tertiary);  
+            font-size: 10px;
+        }
+        50% {
+            background-color: var(--quaternary);  
+            font-size: 20px;
+        }
+        75% {
+            background-color: var(--tertiary);  
+            font-size: 40px;
+        }
+        100% { 
+            background-color: var(--primary);
+        }
+      }
+    
+}
+
+@media screen and (max-width: 415px) {
+    body {
+        min-height: 736px;
+    }
+
+    .blink {
+        animation: blink 1s steps(1, end) 3;
+      }
+      
+      @keyframes blink {
+        0% {
+            background-color: var(--quaternary);  
+            font-size: 5px;
+        }
+        25% {
+            background-color: var(--tertiary);  
+            font-size: 10px;
+        }
+        50% {
+            background-color: var(--quaternary);  
+            font-size: 20px;
+        }
+        75% {
+            background-color: var(--tertiary);  
+            font-size: 26px;
+        }
+        100% { 
+            background-color: var(--primary);
+        }
+      }
+    
+    .click-me {
+        margin: 5px 0 0 205px;
+    }  
+
+}
+
+@media screen and (max-width: 414px) {
+    header {
+        font-size: 12px;
+        height: 50px;
+    } 
+
+    .click-me {
+        margin: 5px 0;
+    }
+}
+
+@media screen and (width: 360px) {
+    .click-me {
+        margin: 5px 0 0 205px;
+    }
+}
+
+@media screen and (width: 280px) {
+    .search-btn {
+        margin: 2px 0;
+    }
+    
+    .click-me {
+        margin: 2px 0;
+    }
+
+    .blink {
+        animation: blink 1s steps(1, end) 3;
+      }
+      
+      @keyframes blink {
+        0% {
+            background-color: var(--quaternary);  
+            font-size: 5px;
+        }
+        25% {
+            background-color: var(--tertiary);  
+            font-size: 10px;
+        }
+        50% {
+            background-color: var(--quaternary);  
+            font-size: 20px;
+        }
+        75% {
+            background-color: var(--tertiary);  
+            font-size: 23px;
+        }
+        100% { 
+            background-color: var(--primary);
+        }
+      }
+
 }

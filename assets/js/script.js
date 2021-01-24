@@ -14,12 +14,14 @@ let getPhotos = function(search) {
     .then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-            
+        
+            // Clear out previous DOM elements on new search
             const elements = document.getElementsByClassName("image-id");
             while (elements.length > 0) elements[0].remove();
             let searchName = document.getElementById('span-search');
             searchName.textContent = " " + search + " ";
            
+            // Loop through photo array from API
             if (!data["photos"]["photo"] || data["photos"]["photo"].length < 1) {
                 errorSearchEl.textContent = "** Sorry no photos found, try again **";
             } else {
@@ -46,6 +48,7 @@ let getPhotos = function(search) {
     });
 };
 
+// Get search text from input field
 let getSearch = function (event) {
     event.preventDefault();
     errorSearchEl.textContent = "";
